@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E115B3B-103D-43D1-A184-0A497F0284D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimuKit.ML.SVM</RootNamespace>
+    <AssemblyName>SimuKit.ML.SVM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantKernel.cs" />
+    <Compile Include="GaussianKernel.cs" />
+    <Compile Include="IKernel.cs" />
+    <Compile Include="KernelSVMCostFunction.cs" />
+    <Compile Include="KernelSVM.cs" />
+    <Compile Include="LinearSVM.cs" />
+    <Compile Include="LinearSVM_ParamSelector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinearSVMCostFunction.cs" />
+    <Compile Include="KernelSVM_ParamSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SimuKit.Math\SimuKit.Math.csproj">
+      <Project>{206551B4-70D2-4587-B1B8-AB276578B8F4}</Project>
+      <Name>SimuKit.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimuKit.ML\SimuKit.ML.csproj">
+      <Project>{A0EEAC9F-645A-4C76-A960-31C79BA71417}</Project>
+      <Name>SimuKit.ML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimuKit.Solvers.Continuous\SimuKit.Solvers.Continuous.LocalSearch\SimuKit.Solvers.Continuous.LocalSearch.csproj">
+      <Project>{3D727109-2E3C-4DD6-8C13-C3AF22CD42DB}</Project>
+      <Name>SimuKit.Solvers.Continuous.LocalSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimuKit.Solvers.Continuous\SimuKit.Solvers.Continuous\SimuKit.Solvers.Continuous.csproj">
+      <Project>{AA623603-14A4-4265-9DF7-C4BC32E2FA47}</Project>
+      <Name>SimuKit.Solvers.Continuous</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimuKit.Solvers.Core\SimuKit.Solvers.Core.csproj">
+      <Project>{3989DBB2-154B-45DB-A63F-7AE3D36A27D2}</Project>
+      <Name>SimuKit.Solvers.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

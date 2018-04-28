@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SimuKit.ML.Lang;
 
-namespace SimuKit.ML.SVM
+namespace SVM
 {
     public class ConstantKernel : IKernel
     {

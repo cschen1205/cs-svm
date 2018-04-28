@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using SimuKit.Solvers.Continuous.ProblemModels;
 
-namespace SimuKit.ML.SVM
+namespace SVM
 {
     public class LinearSVMCostFunction : CostFunction
     {

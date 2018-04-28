@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SimuKit.ML.SVM.GUI
+namespace SVM.GUI
 {
     static class Program
     {

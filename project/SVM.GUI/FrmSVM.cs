@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using SimuKit.ML.Lang;
-using SimuKit.ML.SVM;
-using SimuKit.ML.Util;
-using SimuKit.ML.Solvers;
+using Lang;
+using SVM;
+using Util;
+using Solvers;
 
-namespace SimuKit.ML.SVM.GUI
+namespace SVM.GUI
 {
     public partial class FrmSVM : Form
     {

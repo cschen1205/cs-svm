@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SimuKit.Solvers.Continuous.ProblemModels;
-using SimuKit.ML.Lang;
+using Lang;
 
-namespace SimuKit.ML.SVM
+namespace SVM
 {
     public class KernelSVMCostFunction<T> : CostFunction
         where T : CDataRecord

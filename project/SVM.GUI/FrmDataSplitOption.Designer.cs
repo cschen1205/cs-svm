@@ -1,4 +1,4 @@
-﻿namespace SimuKit.ML.SVM.GUI
+﻿namespace SVM.GUI
 {
     partial class FrmDataSplitOption
     {

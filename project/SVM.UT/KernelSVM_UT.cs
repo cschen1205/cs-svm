@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SimuKit.ML.Lang;
+using Lang;
 using System.Xml;
 using SimuKit.Math.Distribution;
-using SimuKit.ML.Util;
+using Util;
 
-namespace SimuKit.ML.SVM.UT
+namespace SVM.UT
 {
     public class KernelSVM_UT
     {

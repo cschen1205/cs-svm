@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SimuKit.ML.Lang;
+using Lang;
 using SimuKit.Solvers.Continuous.LocalSearch;
-using SimuKit.ML.Solvers;
+using Solvers;
 using SimuKit.Solvers.Continuous;
 using SimuKit.Solvers.Core;
 
-namespace SimuKit.ML.SVM
+namespace SVM
 {
     public class KernelSVM<T> : Classifier<T, double>
         where T : CDataRecord

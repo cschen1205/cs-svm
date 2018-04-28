@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVM", "SVM\SVM.csproj", "{4E115B3B-103D-43D1-A184-0A497F0284D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVM.UT", "SVM.UT\SVM.UT.csproj", "{DAF52521-06E0-4956-AFDC-8F12495163D3}"
@@ -26,6 +28,8 @@ Global
 		{4E115B3B-103D-43D1-A184-0A497F0284D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E115B3B-103D-43D1-A184-0A497F0284D5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4E115B3B-103D-43D1-A184-0A497F0284D5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4E115B3B-103D-43D1-A184-0A497F0284D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E115B3B-103D-43D1-A184-0A497F0284D5}.Release|x86.Build.0 = Release|Any CPU
 		{DAF52521-06E0-4956-AFDC-8F12495163D3}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{DAF52521-06E0-4956-AFDC-8F12495163D3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{DAF52521-06E0-4956-AFDC-8F12495163D3}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -49,5 +53,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0DBE5A9-6E02-4256-BC9E-962F68FE4246}
 	EndGlobalSection
 EndGlobal

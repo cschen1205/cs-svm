@@ -5,13 +5,14 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DAF52521-06E0-4956-AFDC-8F12495163D3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{C891747C-29E2-4995-A3CA-409F22F1AD7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimuKit.ML.SVM.UT</RootNamespace>
-    <AssemblyName>SimuKit.ML.SVM.UT</AssemblyName>
+    <RootNamespace>SVM.GUI</RootNamespace>
+    <AssemblyName>SVM.GUI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,30 +35,68 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="netchartdir">
+      <HintPath>C:\ChartDirector\signed\standard\netchartdir.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KernelSVM_UT.cs" />
-    <Compile Include="LinearSVM_UT.cs" />
+    <Compile Include="FrmDataSplitOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataSplitOption.Designer.cs">
+      <DependentUpon>FrmDataSplitOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSVM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSVM.Designer.cs">
+      <DependentUpon>FrmSVM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDataSplitOption.resx">
+      <DependentUpon>FrmDataSplitOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSVM.resx">
+      <DependentUpon>FrmSVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\packages\MathNet.Numerics\src\Numerics\Numerics.csproj">
       <Project>{B7CAE5F4-A23F-4438-B5BE-41226618B695}</Project>
       <Name>Numerics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SimuKit.Math\SimuKit.Math.csproj">
-      <Project>{206551B4-70D2-4587-B1B8-AB276578B8F4}</Project>
-      <Name>SimuKit.Math</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SimuKit.ML\SimuKit.ML.csproj">
+    <ProjectReference Include="..\..\SimuKit.ML\csproj">
       <Project>{A0EEAC9F-645A-4C76-A960-31C79BA71417}</Project>
       <Name>SimuKit.ML</Name>
     </ProjectReference>
@@ -69,9 +108,13 @@
       <Project>{AA623603-14A4-4265-9DF7-C4BC32E2FA47}</Project>
       <Name>SimuKit.Solvers.Continuous</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimuKit.ML.SVM\SimuKit.ML.SVM.csproj">
+    <ProjectReference Include="..\..\SimuKit.Solvers.Core\SimuKit.Solvers.Core.csproj">
+      <Project>{3989DBB2-154B-45DB-A63F-7AE3D36A27D2}</Project>
+      <Name>SimuKit.Solvers.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SVM\SVM.csproj">
       <Project>{4E115B3B-103D-43D1-A184-0A497F0284D5}</Project>
-      <Name>SimuKit.ML.SVM</Name>
+      <Name>SVM</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
